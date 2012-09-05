@@ -28,9 +28,6 @@
 [submodule "bundle/Command-T"]
 	path = bundle/Command-T
 	url = git://github.com/wincent/Command-T.git
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
 [submodule "bundle/numbers.vim"]
 	path = bundle/numbers.vim
 	url = git://github.com/myusuf3/numbers.vim.git
