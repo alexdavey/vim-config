@@ -1,3 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/alexdavey/.vim/bundle'
+let g:netrw_dirhist_2='/Users/alexdavey/Sites/grab'
+let g:netrw_dirhist_3='/Users/alexdavey/Sites/grab/src'
+let g:netrw_dirhist_4='/Users/alexdavey/Sites/grab'
+let g:netrw_dirhist_5='/Users/alexdavey/Downloads'
+let g:netrw_dirhist_6='/Users/alexdavey/Sites/grab'
+let g:netrw_dirhist_7='/Users/alexdavey/Sites/grab/src'
