@@ -8,7 +8,8 @@ syntax on
 syntax enable
 set background=dark
 " let g:solarized_termcolors=16
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme base16-default
 
 " Syntax checking on write
 let g:syntastic_enable_signs=0
@@ -49,8 +50,8 @@ let g:EasyMotion_leader_key = '<Leader>'
 
 "Highlight over 80px
 if exists('&colorcolumn')
-  highlight ColorColumn ctermbg=Black
-  highlight ColorColumn guibg=Black
+  highlight ColorColumn ctermbg=233
+  highlight ColorColumn guibg=#121212
   set colorcolumn=80
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
@@ -75,7 +76,6 @@ nmap ;s :mksession! session.vim<CR>
 nmap ;l :so session.vim<CR>
 nmap ;R :RainbowParenthesesToggle<cr>
 nmap ;t :TagbarToggle<cr>
-nmap <Leader>i ^df >>k$r,
 
 " Switch windows using the Ctrl-h/j/k/l keys
 nmap <silent> <C-K> :wincmd k<CR>
