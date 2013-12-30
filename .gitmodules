@@ -6,7 +6,7 @@
 	url = git://github.com/scrooloose/syntastic.git
 [submodule "bundle/L9"]
 	path = bundle/L9
-	url = git://github.com/klen/L9.git
+	url = git://github.com/vim-scripts/L9.git
 [submodule "bundle/FuzzyFinder"]
 	path = bundle/FuzzyFinder
 	url = git://github.com/vim-scripts/FuzzyFinder.git
@@ -34,9 +34,6 @@
 [submodule "bundle/vim-autoclose"]
 	path = bundle/vim-autoclose
 	url = git://github.com/Townk/vim-autoclose.git
-[submodule "bundle/vim-powerline"]
-	path = bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/Superior-Haskell-Interaction-Mode-SHIM"]
 	path = bundle/Superior-Haskell-Interaction-Mode-SHIM
 	url = git://github.com/vim-scripts/Superior-Haskell-Interaction-Mode-SHIM.git
@@ -46,10 +43,15 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = git@github.com:kien/ctrlp.vim.git
+[submodule "bundle/ctrlp.vim"]
+	path = bundle/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim.git
 [submodule "bundle/colorschemes"]
 	path = bundle/colorschemes
-	url = git@github.com:flazz/vim-colorschemes.git
-
+	url = git://github.com/flazz/vim-colorschemes.git
+[submodule "bundle/base16-vim"]
+	path = bundle/base16-vim
+	url = git://github.com/chriskempson/base16-vim.git
+[submodule "bundle/vim-multiple-cursors"]
+	path = bundle/vim-multiple-cursors
+	url = git://github.com/terryma/vim-multiple-cursors.git
