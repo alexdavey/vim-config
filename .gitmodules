@@ -34,9 +34,6 @@
 [submodule "bundle/vim-autoclose"]
 	path = bundle/vim-autoclose
 	url = git://github.com/Townk/vim-autoclose.git
-[submodule "bundle/Superior-Haskell-Interaction-Mode-SHIM"]
-	path = bundle/Superior-Haskell-Interaction-Mode-SHIM
-	url = git://github.com/vim-scripts/Superior-Haskell-Interaction-Mode-SHIM.git
 [submodule "bundle/vim-peepopen"]
 	path = bundle/vim-peepopen
 	url = git://github.com/shemerey/vim-peepopen.git

@@ -8,13 +8,24 @@ syntax on
 syntax enable
 set background=dark
 " let g:solarized_termcolors=16
-" colorscheme jellybeans
-colorscheme base16-default
+colorscheme jellybeans
+" colorscheme base16-default
+
+" Get rid of pipeline symbols in split column and replace with a single bar
+set fillchars+=vert:\ 
+hi VertSplit ctermbg=234
+hi LineNr ctermbg=233
 
 " Syntax checking on write
 let g:syntastic_enable_signs=0
 let g:syntastic_auto_loc_list=0
 let syntastic_enable_highlighting=1
+highlight SyntasticError ctermbg=Red
+highlight SyntasticError ctermbg=Red
+
+" Map Alt-Q and Alt-E to next and previous buffer
+noremap ∆ :bprevious<cr>
+noremap ˚ :bnext<cr>
 
 " set guifont="Courier New":h11
 " Patched default font for fancy powerline symbols
@@ -58,7 +69,7 @@ else
 endif
 
 "Abbreviations
-abbrev open :! open -a Google\ Chrome.app %:p<cr>
+" abbrev open :! open -a Google\ Chrome.app %:p<cr>
 
 "Mappings
 inoremap jk <esc>
@@ -88,9 +99,9 @@ nmap <silent> <C-L> :wincmd l<CR>
 " nmap <C-K> <C-W>k<C-W>_
 
 "Source vimrc after saving it
-if has("autocmd")
-	autocmd bufwritepost .vimrc source $MYVIMRC
-endif
+" if has("autocmd")
+" 	autocmd bufwritepost .vimrc source $MYVIMRC
+" endif
 
 "NERDTree settings
 let NERDTreeShowHidden=1
@@ -109,9 +120,9 @@ let g:RefreshRunningBrowserReturnFocus=0
 " autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_au
 autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_au
 
-"Word wrapping for .md and .txt files
-autocmd BufNewFile,BufRead *.txt setlocal wrap linebreak
-autocmd BufNewFile,BufRead *.md setlocal wrap linebreak
+	"Word wrapping for .md and .txt files
+	autocmd BufNewFile,BufRead *.txt setlocal wrap linebreak
+	autocmd BufNewFile,BufRead *.md setlocal wrap linebreak
 
 "Disable arrow keys
 map <up> <nop>
@@ -130,14 +141,23 @@ imap <right> <nop>
 if has("gui_running")
 	set guioptions=egmrt
 endif
-imap [ []<left>
+
+" imap [ []<left>
 
 " JSLint.vim
 filetype plugin on
 
 " Powerline
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+	endif
+	let g:airline_symbols.space = "\ua0"
+
 set laststatus=2
-let g:Powerline_symbols='fancy'
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='powerlineish'
+set linespace=0
 
 "Omnicompletion
 set ofu=syntaxcomplete#Complete
