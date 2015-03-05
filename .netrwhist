@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Applications/Qt/5.0.0/Src/qtbase/examples/widgets/tutorials/gettingStarted/gsQt/part3'
-let g:netrw_dirhist_2='/Users/alexdavey/.vim/.git'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/alexdavey/Dropbox/Work'
+let g:netrw_dirhist_2='/Users/alexdavey/Dropbox/Work/FEEG2002'
+let g:netrw_dirhist_3='/Users/alexdavey/Dropbox/Work/FEEG2002/moment_of_inertia'

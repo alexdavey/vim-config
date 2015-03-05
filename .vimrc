@@ -16,6 +16,11 @@ set fillchars+=vert:\
 hi VertSplit ctermbg=234
 hi LineNr ctermbg=233
 
+let g:pathogen_disabled = ['syntastic']
+
+" Otherwise backspace key doesn't work (for some reason)
+set backspace=indent,eol,start
+
 " Syntax checking on write
 let g:syntastic_enable_signs=0
 let g:syntastic_auto_loc_list=0
@@ -182,3 +187,7 @@ nmap <leader>q :CtrlPMixed<cr>
 " Alt-j/k deletes blank line below/above
 " nnoremap <silent><C-J> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 " nnoremap <silent><C-K> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
+" LATEX + Rubber plugin
+nnoremap <leader>c :w<CR>: !rubber --pdf --warn all %<cr><cr>
+nnoremap <leader>v :!open -g %:r.pdf <CR><CR>
