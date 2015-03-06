@@ -54,7 +54,7 @@
 	url = git://github.com/terryma/vim-multiple-cursors.git
 [submodule "bundle/Wombat"]
 	path = bundle/Wombat
-	url = git://github.com/terryma/vim-scripts/Wombat.git
+	url = git://github.com/vim-scripts/Wombat.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
