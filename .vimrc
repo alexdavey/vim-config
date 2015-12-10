@@ -12,11 +12,11 @@ colorscheme jellybeans
 " colorscheme base16-default
 
 " Get rid of pipeline symbols in split column and replace with a single bar
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 hi VertSplit ctermbg=234
 hi LineNr ctermbg=233
 
-let g:pathogen_disabled = ['syntastic']
+let g:pathogen_disabled = ['syntastic', 'vim-peepopen', 'repmo.vim', 'simplenote.vim']
 
 " Otherwise backspace key doesn't work (for some reason)
 set backspace=indent,eol,start
@@ -37,8 +37,13 @@ noremap ˚ :bnext<cr>
 set mouse=a
 set guifont=Bitstream\ Vera\ Sans\ Mono\ for\ Powerline:h12
 set encoding=utf-8
+
+" The preferred method for tabs (in python)
 set tabstop=4
+set shiftwidth=4
+set expandtab
 set nosmartindent
+
 set autoindent
 set ignorecase
 set smartcase
@@ -117,6 +122,9 @@ nmap ;r :w<cr>:RRB<cr>
 let g:RefreshRunningBrowserDefault='chrome'
 let g:RefreshRunningBrowserReturnFocus=0
 
+" Move between buffers without writing
+set hidden
+
 "Map autoclose
 " imap ( ()<left>
 " imap { {}<left>
@@ -125,9 +133,9 @@ let g:RefreshRunningBrowserReturnFocus=0
 " autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_au
 autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_au
 
-	"Word wrapping for .md and .txt files
-	autocmd BufNewFile,BufRead *.txt setlocal wrap linebreak
-	autocmd BufNewFile,BufRead *.md setlocal wrap linebreak
+"Word wrapping for .md and .txt files
+    autocmd BufNewFile,BufRead *.txt setlocal wrap linebreak
+    autocmd BufNewFile,BufRead *.md setlocal wrap linebreak
 
 "Disable arrow keys
 map <up> <nop>
@@ -144,7 +152,7 @@ imap <right> <nop>
 
 "Hide MacVim toolbar
 if has("gui_running")
-	set guioptions=egmrt
+    set guioptions=egmrt
 endif
 
 " imap [ []<left>
@@ -154,9 +162,9 @@ filetype plugin on
 
 " Powerline
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-	endif
-	let g:airline_symbols.space = "\ua0"
+    let g:airline_symbols = {}
+    endif
+    let g:airline_symbols.space = "\ua0"
 
 set laststatus=2
 let g:airline_powerline_fonts=1
@@ -178,6 +186,9 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 "Highlight current line
 set cursorline
 
+" System clipboard
+set clipboard=unnamedplus
+
 "Change leader key to a comma
 let mapleader = ','
 
@@ -191,3 +202,10 @@ nmap <leader>q :CtrlPMixed<cr>
 " LATEX + Rubber plugin
 nnoremap <leader>c :w<CR>: !rubber --pdf --warn all %<cr><cr>
 nnoremap <leader>v :!open -g %:r.pdf <CR><CR>
+
+" Simplenote.vim plugin
+let g:SimplenoteUsername = "alexdavey0@gmail.com"
+let g:SimplenotePassword = "101345"
+
+" Augment argumentative.vim to allow deleting comments
+" nnoremap d, ?(\\|,<cr> x d/)\\|,<cr> :nohlsearch<cr>
