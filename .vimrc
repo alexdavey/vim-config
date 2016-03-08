@@ -12,7 +12,7 @@ colorscheme jellybeans
 " colorscheme base16-default
 
 " Get rid of pipeline symbols in split column and replace with a single bar
-set fillchars+=vert:\
+set fillchars+=vert:\ 
 hi VertSplit ctermbg=234
 hi LineNr ctermbg=233
 
@@ -22,6 +22,8 @@ let g:pathogen_disabled = ['syntastic', 'vim-peepopen', 'repmo.vim', 'simplenote
 set backspace=indent,eol,start
 
 " Syntax checking on write
+let g:syntastic_cpp_compiler='clang++'
+let g:syntastic_cpp_compiler_options =' -std=c++11 -stdlib=libc++'
 let g:syntastic_enable_signs=0
 let g:syntastic_auto_loc_list=0
 let syntastic_enable_highlighting=1
@@ -186,8 +188,8 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 "Highlight current line
 set cursorline
 
-" System clipboard
-set clipboard=unnamedplus
+" System clipboard (supposedly.... actually just breaks vim registers)
+" set clipboard=unnamedplus
 
 "Change leader key to a comma
 let mapleader = ','
