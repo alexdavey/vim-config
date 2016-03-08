@@ -71,7 +71,7 @@
 	path = bundle/repmo.vim
 	url = git://github.com/vim-scripts/repmo.vim
 [submodule "bundle/simplenote.vim"]
-	path = bundle/simplenote.vim.git
+	path = bundle/simplenote.vim
 	url = git://github.com/mrtazz/simplenote.vim.git
 [submodule "bundle/vim-argumentative"]
 	path = bundle/vim-argumentative
