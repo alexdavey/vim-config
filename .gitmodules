@@ -67,3 +67,15 @@
 [submodule "bundle/CamelCaseMotion"]
 	path = bundle/CamelCaseMotion
 	url = git://github.com/bkad/CamelCaseMotion.git
+<<<<<<< HEAD
+=======
+[submodule "bundle/repmo.vim"]
+	path = bundle/repmo.vim
+	url = git://github.com/vim-scripts/repmo.vim
+[submodule "bundle/simplenote.vim"]
+	path = bundle/simplenote.vim
+	url = git://github.com/mrtazz/simplenote.vim.git
+[submodule "bundle/vim-argumentative"]
+	path = bundle/vim-argumentative
+	url = git://github.com/PeterRincker/vim-argumentative.git
+>>>>>>> d6e745a24b8b27fe8676b7f4319c9c6c23f1f700
